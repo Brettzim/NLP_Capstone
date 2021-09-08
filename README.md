@@ -18,7 +18,7 @@ The Twitter dataset is from HumAID, which consists of around 15000 annotated twe
 * tweet_text – The Actual Tweet itself
 * class_label – The manually labeled sentiment class
 
-The target classes in the provided datasets consists of following humanitarian categories on the left. These eleven classes were then condensed by me into the 4 classes on the right:
+The target classes in the provided datasets consists of following humanitarian categories on the left. These nine classes were then condensed by me into the four classes on the right:
 
 Humaid Targets | My Targets
 ------------ | -------------
