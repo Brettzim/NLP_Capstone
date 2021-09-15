@@ -71,6 +71,8 @@ Up to this point, I vectorized my text with a TFIDF Vectorizer. I wanted to try 
 
 My next step is to move past grid search and try a prepackaged models. I went with [RoBERTA by Facebook](https://ai.facebook.com/blog/roberta-an-optimized-method-for-pretraining-self-supervised-nlp-systems/).
 
+Pickled models can be accessed from [Dropbox](https://www.dropbox.com/sh/c8kl6xjvpytoh3o/AABBHBs0w8qE3_B7bZi_KHZla?dl=0)
+
 ## Conclusion
 
 In conclusion after testing a manipulating different kinds of models, I was impressed with RoBERTa's performance. Even though it performed the best, the robustness of the modelmade it run considerably slower than even the complex naive bayes model I developed. Due to the extreme training time, there is still more to look at when it comes to hyperparameter tuning on RoBERTa. For now, the users choice of text classification model is situational for speed vs accuracy.
