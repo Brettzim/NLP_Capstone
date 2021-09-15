@@ -1,5 +1,6 @@
 # NLP Text Classification on Twitter Data During Natural Disasters
 
+![Natural Disaster](https://upload.wikimedia.org/wikipedia/commons/0/04/Hurricane_Isabel_from_ISS.jpg)
 
 ## Table of Contents
 * [Repository Structure](#Repository-Structure)
