@@ -1,6 +1,24 @@
 # NLP Text Classification on Twitter Data During Natural Disasters
 
-## Overview
+
+## Table of Contents
+* [Repository Structure](#Repository-Structure)
+* [Overview](#Project-Overview)
+* [Use Case](#Use-Case)
+* [The Data](#The-Data)
+* [Analysis](#Analyis)
+* [Conclusions](#Conclusion)
+
+## Repository Structure
+```
+.
+├── Experimentation-Notebook
+│   └── Phase-4-EDA_bretts_edits.ipynb
+├── README.md
+├── Sentiment_Analysis_NLP_Model.ipynb
+└── phase-4-dataset.csv
+```
+## Project Overview
 
 This repository analyzes data in the form of Tweets about hurricanes to create a natural language processing classification model capable of predicting whether the sentiment of a Tweet is that of expressing danger, an emergency, or relief/aid. Due to target class imbalance, the goal of my model is to have a high F1 score. This will be the metric I go by to determine whether predictions are meaningful. 
 
