@@ -12,11 +12,14 @@
 ## Repository Structure
 ```
 .
-├── Experimentation-Notebook
-│   └── Phase-4-EDA_bretts_edits.ipynb
+├── data
+│   └── datasets-from-Humaid-and-Twitter
+├── output
+│   └── classified-documents
 ├── README.md
-├── Sentiment_Analysis_NLP_Model.ipynb
-└── phase-4-dataset.csv
+├── models.ipynb
+├── visualizations.ipynb
+└── twint_scraper.md
 ```
 ## Project Overview
 
