@@ -1,4 +1,4 @@
-# NLP_Capstone
+# NLP Text Classification on Twitter Data During Natural Disasters
 
 ## Overview
 
@@ -6,13 +6,13 @@ This repository analyzes data in the form of Tweets about hurricanes to create a
 
 By using different machine learning techniques, I am capable of interpreting how a Tweet should be perceived by the reader during a live event like a hurricane
 
-## Business Problem
+## Use Case
 
 This model may be used by individuals stuck in a natural disaster that wants to get live updates in the area. 
 
 ## The Data
 
-The Twitter dataset is from HumAID, which consists of around 15000 annotated tweets that has been collected during four major hurricanes: Harvey, Irma, Matthew, and Maria. The dataframe contains three columns
+The Twitter dataset is from [HumAID](https://crisisnlp.qcri.org/humaid_dataset.html), which consists of around 15000 annotated tweets that has been collected during four major hurricanes: Harvey, Irma, Matthew, and Maria. The dataframe contains three columns
 
 * tweet_id – a unique identifier for the poster of the Tweet
 * tweet_text – The Actual Tweet itself
@@ -37,14 +37,19 @@ Fitting these targets together left me with a class imbalance. To mitigate this 
 
 ## Analysis
 
-I first created my baseline model with a dummy classifier. Due to the target class imbalance, the dummy was set to use the stratified strategy. 
+My baseline model was a dummy classifier. Due to the target class imbalance, the dummy was set to use the stratified strategy. 
 
-The first simple model was a pipeline with a tfidf vectorizer and logistic regression. It performed very well so I wanted to see how tuning hyperparameters via a grid search would go.
+The first simple model was a pipeline with a tfidf vectorizer and logistic regression. It performed very well but there were signs of overfitting. So re worked the model by tuning hyperparameters via a grid search.
 
 My next model was a pipeline with a multinomial naïve bayes classifier. From the start, I liked the idea of using a naïve bayes classifier, so I went in on a grid search to get the optimal parameters for this type of model.
 
 I then tried the tuned NB model on my data cleaned a couple of different ways. I used it on regular cleaned text, on stemmed text, and then on lemmatized text. As it turns out, the regular text produced the best scores by a small margin.
 
-My next step is to move past grid search and try advanced prepackaged models. I went with XLNet via PyTorch.
+Up to this point, I vectorized my text with a TFIDF Vectorizer. I wanted to try the same with a Word2Vec Vectorizer
+
+My next step is to move past grid search and try a prepackaged models. I went with [RoBERTA by Facebook](https://ai.facebook.com/blog/roberta-an-optimized-method-for-pretraining-self-supervised-nlp-systems/).
 
 ## Conclusion
+
+In conclusion after testing a manipulating different kinds of models, I was impressed with RoBERTa's performance. Even though it performed the best, the robustness of the modelmade it run considerably slower than even the complex naive bayes model I developed. Due to the extreme training time, there is still more to look at when it comes to hyperparameter tuning on RoBERTa. For now, the users choice of text classification model is situational for speed vs accuracy.
+
