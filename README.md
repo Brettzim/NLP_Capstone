@@ -7,6 +7,7 @@
 * [Overview](#Project-Overview)
 * [Use Case](#Use-Case)
 * [The Data](#The-Data)
+* [Data Cleaning](#Data-Cleaning)
 * [Analysis](#Analyis)
 * [Conclusions](#Conclusion)
 
@@ -40,6 +41,8 @@ The Twitter dataset is from [HumAID](https://crisisnlp.qcri.org/humaid_dataset.h
 * tweet_text – The Actual Tweet itself
 * class_label – The manually labeled sentiment class
 
+## Data Cleaning
+
 The target classes in the provided datasets consists of following humanitarian categories on the left. These nine classes were then condensed by me into the four classes on the right:
 
 Humaid Targets | My Targets
@@ -56,6 +59,14 @@ Sympathy and support			              |Other
 
 Fitting these targets together left me with a class imbalance. To mitigate this and pad the emergency class, I used Twint to scrape emergency related tweets made during Hurricane Sandy to add to the dataset.
 
+The text preprocessing Steps taken are as follows:
+
+*Removing Twitter specific embedded text like mentions, Retweets, Links, Videos, and Hashtags
+*Tokenizing sentences into lists of words
+*Lower casing all letters in the dataset
+*Removing stop words that  do not add meaning to a sentence. Words “like the, and, at”
+*Removing punctuation and symbols
+*Stemming or lemmatizing words to their root
 
 ## Analysis
 
@@ -72,6 +83,8 @@ Up to this point, I vectorized my text with a TFIDF Vectorizer. I wanted to try 
 My next step is to move past grid search and try a prepackaged models. I went with [RoBERTA by Facebook](https://ai.facebook.com/blog/roberta-an-optimized-method-for-pretraining-self-supervised-nlp-systems/).
 
 Pickled models can be accessed from [Dropbox](https://www.dropbox.com/sh/c8kl6xjvpytoh3o/AABBHBs0w8qE3_B7bZi_KHZla?dl=0)
+
+
 
 ## Conclusion
 
