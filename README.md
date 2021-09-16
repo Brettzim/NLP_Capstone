@@ -19,6 +19,7 @@
 ├── output
 │   └── classified-documents
 ├── README.md
+├── interface.md
 ├── models.ipynb
 ├── visualizations.ipynb
 └── twint_scraper.md
@@ -31,7 +32,7 @@ By using different machine learning techniques, I am capable of interpreting how
 
 ## Use Case
 
-This model may be used by individuals stuck in a natural disaster that wants to get live updates in the area. 
+This model may be used by individuals stuck in a natural disaster that wants to get live updates in the area. To run, either download a pickled model from my [Dropbox](https://www.dropbox.com/sh/c8kl6xjvpytoh3o/AABBHBs0w8qE3_B7bZi_KHZla?dl=0), Or create your own with models.ipynb. Then, run interface.ipynb and make sure it is using the correct NLP model. Now, modify the Twint scraper for topic of Tweets and the notebook should output 4 documents on seperated Tweets by topic.
 
 ## The Data
 
@@ -83,7 +84,6 @@ Up to this point, I vectorized my text with a TFIDF Vectorizer. I wanted to try 
 My next step is to move past grid search and try a prepackaged models. I went with [RoBERTA by Facebook](https://ai.facebook.com/blog/roberta-an-optimized-method-for-pretraining-self-supervised-nlp-systems/).
 
 Pickled models can be accessed from [Dropbox](https://www.dropbox.com/sh/c8kl6xjvpytoh3o/AABBHBs0w8qE3_B7bZi_KHZla?dl=0)
-
 
 
 ## Conclusion
