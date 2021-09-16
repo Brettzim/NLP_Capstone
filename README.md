@@ -61,12 +61,12 @@ Fitting these targets together left me with a class imbalance. To mitigate this 
 
 The text preprocessing Steps taken are as follows:
 
-*Removing Twitter specific embedded text like mentions, Retweets, Links, Videos, and Hashtags
-*Tokenizing sentences into lists of words
-*Lower casing all letters in the dataset
-*Removing stop words that  do not add meaning to a sentence. Words “like the, and, at”
-*Removing punctuation and symbols
-*Stemming or lemmatizing words to their root
+* Removing Twitter specific embedded text like mentions, Retweets, Links, Videos, and Hashtags
+* Tokenizing sentences into lists of words
+* Lower casing all letters in the dataset
+* Removing stop words that  do not add meaning to a sentence. Words “like the, and, at”
+* Removing punctuation and symbols
+* Stemming or lemmatizing words to their root
 
 ## Analysis
 
